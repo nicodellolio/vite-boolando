@@ -1,0 +1,46 @@
+/* #region Footer */
+
+#site_footer {
+    display: flex;
+    justify-content: center;
+    background-color: black;
+    color: #fff;
+}
+
+div.footer_container {
+    display: flex;
+    justify-content: space-between;
+    width: 75%;
+}
+
+div.info_footer {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    gap: 0.5rem;
+    padding: 3rem 0rem;
+}
+
+aside.info_footer {
+    display: flex;
+    gap: 0.75rem;
+}
+
+div.social {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+aside.social {
+    display: flex;
+    gap: 0.5rem;
+    padding-top: 1rem;
+}
+
+.social img {
+    width: 2rem;
+
+}
+
+/* #endregion Footer */

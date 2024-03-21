@@ -1,0 +1,31 @@
+/* #region Header */
+#site_header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #ff6900FF;
+    padding: 1rem 0rem 1rem 0rem;
+    font-size: 1.25rem;
+    color: #fff;
+}
+
+.target ul {
+    display: flex;
+    gap: 1rem;
+    list-style: none;
+}
+
+#logo img {
+    width: 10rem;
+}
+
+#call_to_action img {
+    width: 2rem;
+    padding: 0.5rem;
+}
+
+div#call_to_action {
+    color: #fff;
+}
+
+/* #endregion Header */
