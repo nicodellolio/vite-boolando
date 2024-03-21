@@ -3,8 +3,10 @@ export default {
     name: 'AppHeader',
 
     data() {
-        targets: ['Donna', 'Uomo', 'Bambino'];
-        hIcons: ['user.svg', 'heart.svg', 'shopping-bag.svg']
+        return {
+            targets: ['Donna', 'Uomo', 'Bambino'],
+            hIcons: ['user', 'heart', 'shopping-bag']
+        }
     }
 }
 
@@ -25,7 +27,7 @@ export default {
         </div>
         <!-- /#call_to_action -->
         <div id="call_to_action">
-            <!-- <img v-for="icon in hIcons" :src=icon alt=""> -->
+            <img v-for="icon in hIcons" :src="'/public/img/' + icon + '.svg'" alt="">
         </div>
     </header>
 
