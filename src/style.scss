@@ -1,0 +1,179 @@
+* {
+    margin: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif
+}
+
+/* #region Header */
+#site_header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #ff6900FF;
+    padding: 1rem 0rem 1rem 0rem;
+    font-size: 1.25rem;
+    color: #fff;
+}
+
+.target ul {
+    display: flex;
+    gap: 1rem;
+    list-style: none;
+}
+
+#logo img {
+    width: 10rem;
+}
+
+#call_to_action img {
+    width: 2rem;
+    padding: 0.5rem;
+}
+
+div#call_to_action {
+    color: #fff;
+}
+
+/* #endregion Header */
+
+/* #region Main */
+#site_main {
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    width: 95%;
+    padding: 3rem 0;
+}
+
+aside.model {
+    width: 25%;
+    position: relative;
+}
+
+img.model {
+    width: 100%;
+}
+
+div.brand {
+    color: #808080
+}
+
+span.newprice {
+    color: red;
+    font-size: 0.75rem;
+}
+
+img.to_hover {
+    position: absolute
+}
+
+aside.model:hover img.to_hide {
+    position: relative;
+    z-index: 2
+}
+
+.over_info {
+    position: absolute;
+    z-index: 10;
+}
+
+div.like,
+span.discount,
+span.eco {
+    position: absolute;
+    z-index: 10;
+}
+
+div.like {
+    top: 0.5rem;
+    right: 0;
+    font-size: 2rem;
+    background-color: #fff;
+    padding: 0.5rem 1rem 0.25rem 1rem;
+}
+
+span.discount {
+    bottom: 6rem;
+    left: 0;
+    color: white;
+    background-color: red;
+    padding: 0.5rem;
+}
+
+span.eco {
+    left: 4rem;
+    bottom: 6rem;
+    color: #fff;
+    background-color: green;
+    padding: 0.5rem;
+}
+
+.btm-right span.eco {
+    left: 0;
+    bottom: 6rem;
+    color: #fff;
+    background-color: green;
+    padding: 0.5rem;
+}
+
+/* #endregion Main */
+
+/* #region Footer */
+
+#site_footer {
+    display: flex;
+    justify-content: center;
+    background-color: black;
+    color: #fff;
+}
+
+div.footer_container {
+    display: flex;
+    justify-content: space-between;
+    width: 75%;
+}
+
+div.info_footer {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    gap: 0.5rem;
+    padding: 3rem 0rem;
+}
+
+aside.info_footer {
+    display: flex;
+    gap: 0.75rem;
+}
+
+div.social {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+aside.social {
+    display: flex;
+    gap: 0.5rem;
+    padding-top: 1rem;
+}
+
+.social img {
+    width: 2rem;
+
+}
+
+/* #endregion Footer */
+
+/* region Bonus */
+
+div.hearts:hover div {
+    color: red;
+}
+
+/* #endregion Bonus */
