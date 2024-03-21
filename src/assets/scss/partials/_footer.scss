@@ -1,10 +1,11 @@
-/* #region Footer */
+@use './common_rules.scss' as *;
+
 
 #site_footer {
     display: flex;
     justify-content: center;
     background-color: black;
-    color: #fff;
+    color: $text_light;
 }
 
 div.footer_container {
@@ -40,7 +41,4 @@ aside.social {
 
 .social img {
     width: 2rem;
-
 }
-
-/* #endregion Footer */

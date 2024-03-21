@@ -1,12 +1,14 @@
-/* #region Header */
+@use './common_rules.scss' as *;
+
+
 #site_header {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    background-color: #ff6900FF;
+    background-color: $header_color;
     padding: 1rem 0rem 1rem 0rem;
     font-size: 1.25rem;
-    color: #fff;
+    color: $text_light;
 }
 
 .target ul {
@@ -25,7 +27,5 @@
 }
 
 div#call_to_action {
-    color: #fff;
+    color: $text_light;
 }
-
-/* #endregion Header */

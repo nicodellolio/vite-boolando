@@ -26,6 +26,10 @@ export default {
             <img src="/public/img/bag-shopping-solid-2.svg" alt="">
         </div>
     </header>
+
+    <img src="" alt="">
 </template>
 
-<style scoped></style>
+<style lang="scss">
+@use '../assets/scss/partials/_header.scss';
+</style>

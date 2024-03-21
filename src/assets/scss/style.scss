@@ -1,10 +1,4 @@
-@use './partials/styleHeader.scss' as *;
-@use './partials/styleMain.scss' as *;
-@use './partials/styleFooter.scss' as *;
-
-// * ------------------------------ * //
-
-* {
-    margin: 0;
-    font-family: Verdana, Geneva, Tahoma, sans-serif
-}
+@use './partials/common_rules.scss' as *;
+@use './partials/_header.scss' as *;
+@use './partials/_main.scss' as *;
+@use './partials/_footer.scss' as *;

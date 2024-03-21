@@ -1,4 +1,5 @@
-/* #region Main */
+@use './common_rules.scss' as *;
+
 #site_main {
     display: flex;
     justify-content: center;
@@ -23,11 +24,11 @@ img.model {
 }
 
 div.brand {
-    color: #808080
+    color: $text_brand
 }
 
 span.newprice {
-    color: red;
+    color: $danger_text;
     font-size: 0.75rem;
 }
 
@@ -64,7 +65,7 @@ span.discount {
     bottom: 6rem;
     left: 0;
     color: white;
-    background-color: red;
+    background-color: $danger_ban;
     padding: 0.5rem;
 }
 
@@ -72,7 +73,7 @@ span.eco {
     left: 4rem;
     bottom: 6rem;
     color: #fff;
-    background-color: green;
+    background-color: $success_ban;
     padding: 0.5rem;
 }
 
@@ -80,16 +81,14 @@ span.eco {
     left: 0;
     bottom: 6rem;
     color: #fff;
-    background-color: green;
+    background-color: $success_ban;
     padding: 0.5rem;
 }
-
-/* #endregion Main */
 
 /* region Bonus */
 
 div.hearts:hover div {
-    color: red;
+    color: $danger_text;
 }
 
 /* #endregion Bonus */

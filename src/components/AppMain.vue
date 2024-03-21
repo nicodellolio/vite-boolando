@@ -120,4 +120,6 @@ export default {
 
 </template>
 
-<style scoped></style>
+<style lang="scss">
+@use '../assets/scss/partials/_main.scss';
+</style>
