@@ -1,7 +1,13 @@
 <script>
 export default {
-    name: 'AppHeader'
+    name: 'AppHeader',
+
+    data() {
+        targets: ['Donna', 'Uomo', 'Bambino'];
+        hIcons: ['user.svg', 'heart.svg', 'shopping-bag.svg']
+    }
 }
+
 </script>
 
 <template>
@@ -10,9 +16,7 @@ export default {
         <!-- /#target -->
         <div class="target">
             <ul class="target">
-                <li>Donna</li>
-                <li>Uomo</li>
-                <li>Bambini</li>
+                <li v-for="target in targets">{{ target }}</li>
             </ul>
         </div>
         <!-- /#logo -->
@@ -21,9 +25,7 @@ export default {
         </div>
         <!-- /#call_to_action -->
         <div id="call_to_action">
-            <img src="/public/img/user-regular-2.svg" alt="">
-            <img src="/public/img/heart-regular-2.svg" alt="">
-            <img src="/public/img/bag-shopping-solid-2.svg" alt="">
+            <!-- <img v-for="icon in hIcons" :src=icon alt=""> -->
         </div>
     </header>
 
