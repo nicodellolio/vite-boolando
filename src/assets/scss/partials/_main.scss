@@ -1,27 +1,18 @@
 @use './common_rules.scss' as *;
 
-#site_main {
-    display: flex;
-    justify-content: center;
-}
+// .container {
+//     display: flex;
+//     justify-content: center;
+//     flex-wrap: wrap;
+//     gap: 2rem;
+//     width: 95%;
+//     padding: 3rem 0;
+// }
 
-.container {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 2rem;
-    width: 95%;
-    padding: 3rem 0;
-}
-
-aside.model {
-    width: 25%;
-    position: relative;
-}
-
-img.model {
-    width: 100%;
-}
+// aside.model {
+//     width: 25%;
+//     position: relative;
+// }
 
 div.brand {
     color: $text_brand
@@ -32,14 +23,14 @@ span.newprice {
     font-size: 0.75rem;
 }
 
-img.to_hover {
-    position: absolute
-}
+// img.to_hover {
+//     position: absolute
+// }
 
-aside.model:hover img.to_hide {
-    position: relative;
-    z-index: 2
-}
+// aside.model:hover img.to_hide {
+//     position: relative;
+//     z-index: 2
+// }
 
 .over_info {
     position: absolute;
@@ -77,13 +68,17 @@ span.eco {
     padding: 0.5rem;
 }
 
-.btm-right span.eco {
+span.eco.noDiscount{
     left: 0;
-    bottom: 6rem;
-    color: #fff;
-    background-color: $success_ban;
-    padding: 0.5rem;
 }
+
+// .btm-right span.eco {
+//     left: 0;
+//     bottom: 6rem;
+//     color: #fff;
+//     background-color: $success_ban;
+//     padding: 0.5rem;
+// }
 
 /* region Bonus */
 

@@ -5,7 +5,7 @@ export const products = [
         "frontImage": "1.webp",
         "backImage": "1b.webp",
         "brand": "Levi's",
-        "itemName": "Relaxed Fit",
+        "itemName": "Relaxed Fit Tee Unisex",
         "price": 29.99,
         "isInFavorites": true,
         "badges": [
@@ -59,12 +59,12 @@ export const products = [
         "isInFavorites": false,
         "badges": [
             {
-                "type": "discount",
-                "value": "-50%"
-            },
-            {
                 "type": "tag",
                 "value": "Sostenibilità"
+            },
+            {
+                "type": "discount",
+                "value": "-50%"
             }
         ]
     },
@@ -78,12 +78,8 @@ export const products = [
         "isInFavorites": true,
         "badges": [
             {
-                "type": "discount",
-                "value": "-50%"
-            },
-            {
-                "type": "tag",
-                "value": "Sostenibilità"
+                "type": null,
+                "value": null
             }
         ]
     },

@@ -10,30 +10,39 @@ export default {
         'price',
         'isInFavorites',
         'badges'
-    ]
+    ],
+    computed: {
+        discount() {
+            let _discount = 20 + this.price
+
+
+            return _discount;
+        }
+    }
 }       
 </script>
 
 <template>
 
-    <div class="col">
-        <div class="card">
+    <div class="col mt-1 mb-4 ">
+        <div class="card h-100">
 
             <div class="hearts">
                 <div class="like">&hearts;</div>
             </div>
 
-            <span class="discount">{{ badges.value }}</span>
-            <span class="eco">Sostenibilità</span>
+            <span v-if="badges[badges.length - 1].value != 'Sostenibilità'" class="discount">{{ badges[badges.length - 1].value }}</span>
 
-            <img :src="'/public/img/' + frontImage" class="top-left model to_hover" alt="">
+            <span v-if="badges[0].type == 'tag'" class="eco" :class="{'noDiscount' : badges[0].value !== 'Sostenibilità'}">Sostenibilità</span>
 
-            <img :src="'/public/img/' + backImage" class="top-left model to_hover" alt="">
+            <img :src="'/public/img/' + frontImage" class="model w-100" alt="">
+
+            <!-- <img :src="'/public/img/' + backImage" class="model" alt=""> -->
 
             <div class="brand">{{brand}}</div>
-            <div class="description"><strong>{{itemName}}</strong></div>
+            <div class="description fw-bold text-uppercase">{{itemName}}</div>
             <div class="price">
-                <span class="newprice"><strong>{{'scontato &euro'}};</strong></span>
+                <span class="newprice"><strong v-if="badges[0].type == 'discount'">{{ discount + 'scontato &euro;'}}</strong></span>
                 <span class="oldprice"><del>{{price + '&euro'}};</del></span>
             </div>
 
