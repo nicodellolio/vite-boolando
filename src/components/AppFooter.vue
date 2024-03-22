@@ -34,5 +34,5 @@ export default {
 </template>
 
 <style lang="scss">
-@use '../assets/scss/partials/_footer.scss';
+@import '../assets/scss/partials/_footer.scss';
 </style>
