@@ -1,18 +1,9 @@
 @use './common_rules.scss' as *;
 
-// .container {
-//     display: flex;
-//     justify-content: center;
-//     flex-wrap: wrap;
-//     gap: 2rem;
-//     width: 95%;
-//     padding: 3rem 0;
-// }
-
-// aside.model {
-//     width: 25%;
-//     position: relative;
-// }
+main{
+    height: calc((100vh - 78px) - 175px);
+    overflow-y: auto;
+}
 
 div.brand {
     color: $text_brand
@@ -27,19 +18,12 @@ span.oldprice.noDiscount{
     text-decoration: line-through;
 }
 
-// img.to_hover {
-//     position: absolute
-// }
-
-// aside.model:hover img.to_hide {
-//     position: relative;
-//     z-index: 2
-// }
 
 .over_info {
     position: absolute;
     z-index: 10;
 }
+
 
 div.like,
 span.discount,
@@ -54,6 +38,18 @@ div.like {
     font-size: 2rem;
     background-color: #fff;
     padding: 0.5rem 1rem 0.25rem 1rem;
+}
+
+img.back{
+    display: none;
+}
+
+.card:hover img.front{
+    display: none;
+}
+
+.card:hover img.back{
+    display: flex;
 }
 
 span.discount {
@@ -76,13 +72,6 @@ span.eco.noDiscount{
     left: 0;
 }
 
-// .btm-right span.eco {
-//     left: 0;
-//     bottom: 6rem;
-//     color: #fff;
-//     background-color: $success_ban;
-//     padding: 0.5rem;
-// }
 
 /* region Bonus */
 

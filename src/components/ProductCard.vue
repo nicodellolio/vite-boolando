@@ -37,9 +37,9 @@ export default {
 
             <span v-if="badges[0].type == 'tag'" class="eco" :class="{'noDiscount' : badges[0].value !== 'Sostenibilità'}">Sostenibilità</span>
 
-            <img :src="'/public/img/' + frontImage" class="model w-100" alt="">
+            <img :src="'/public/img/' + frontImage" class="front model w-100" alt="">
 
-            <!-- <img :src="'/public/img/' + backImage" class="model" alt=""> -->
+            <img :src="'/public/img/' + backImage" class="back model w-100" alt="">
 
             <div class="brand ms-1">{{brand}}</div>
             <div class="description fw-bold text-uppercase ms-1">{{itemName}}</div>
