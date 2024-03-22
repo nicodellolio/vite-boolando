@@ -5,7 +5,7 @@ export const products = [
         "frontImage": "1.webp",
         "backImage": "1b.webp",
         "brand": "Levi's",
-        "itemitemName": "Relaxed Fit",
+        "itemName": "Relaxed Fit",
         "price": 29.99,
         "isInFavorites": true,
         "badges": [
