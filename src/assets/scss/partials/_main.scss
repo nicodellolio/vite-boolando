@@ -23,6 +23,10 @@ span.newprice {
     font-size: 0.75rem;
 }
 
+span.oldprice.noDiscount{
+    text-decoration: line-through;
+}
+
 // img.to_hover {
 //     position: absolute
 // }

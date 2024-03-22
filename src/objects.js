@@ -95,6 +95,10 @@ export const products = [
             {
                 "type": "tag",
                 "value": "Sostenibilità"
+            },
+            {
+                "type": null,
+                "value": null
             }
         ]
     }

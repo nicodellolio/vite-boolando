@@ -12,12 +12,14 @@ export default {
         'badges'
     ],
     computed: {
-        discount() {
-            let _discount = 20 + this.price
+        // discount() {
+        //     let _discount = (this.price / 100 * ( 100 - (parseInt(badges[badges.length - 1].value))))
+
+        //     ((29.99 / 100) * Math.abs((100 - parseInt('-40%')))).toFixed(2)
 
 
-            return _discount;
-        }
+        //     return _discount.toFixed(2);
+        // }
     }
 }       
 </script>
@@ -31,7 +33,7 @@ export default {
                 <div class="like">&hearts;</div>
             </div>
 
-            <span v-if="badges[badges.length - 1].value != 'Sostenibilità'" class="discount">{{ badges[badges.length - 1].value }}</span>
+            <span v-if="badges[badges.length - 1].type == 'discount'" class="discount">{{ badges[badges.length - 1].value }}</span>
 
             <span v-if="badges[0].type == 'tag'" class="eco" :class="{'noDiscount' : badges[0].value !== 'Sostenibilità'}">Sostenibilità</span>
 
@@ -39,11 +41,13 @@ export default {
 
             <!-- <img :src="'/public/img/' + backImage" class="model" alt=""> -->
 
-            <div class="brand">{{brand}}</div>
-            <div class="description fw-bold text-uppercase">{{itemName}}</div>
-            <div class="price">
-                <span class="newprice"><strong v-if="badges[0].type == 'discount'">{{ discount + 'scontato &euro;'}}</strong></span>
-                <span class="oldprice"><del>{{price + '&euro'}};</del></span>
+            <div class="brand ms-1">{{brand}}</div>
+            <div class="description fw-bold text-uppercase ms-1">{{itemName}}</div>
+            
+            <div class="price ms-1">
+                <span class="newprice fw-bold fs-6 me-2" v-if="badges[badges.length - 1].type == 'discount'">{{ (price / 100 * ( 100 - Math.abs((parseInt(badges[badges.length - 1].value))))).toFixed(2) + '&euro;'}}</span>
+
+                <span :class="{'noDiscount' : badges[badges.length - 1].value != 'Sostenibilità' &&  badges[badges.length - 1].value != null}" class="oldprice ms-1">{{price + '&euro;'}}</span>
             </div>
 
         </div>
