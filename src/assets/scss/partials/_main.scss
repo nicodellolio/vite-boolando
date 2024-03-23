@@ -73,11 +73,6 @@ span.eco.noDiscount{
     left: 0;
 }
 
-
-/* region Bonus */
-
-div.hearts:hover div {
+div.hearts.active {
     color: $danger_text;
 }
-
-/* #endregion Bonus */
