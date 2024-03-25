@@ -25,11 +25,11 @@ export default {
         </div>
         <!-- /#logo -->
         <div id="logo">
-            <img src="/public/img/boolean-logo.png" alt="">
+            <img src="/img/boolean-logo.png" alt="">
         </div>
         <!-- /#call_to_action -->
         <div id="call_to_action">
-            <img v-for="icon in hIcons" :src="'/public/img/' + icon + '.svg'" alt="">
+            <img v-for="icon in hIcons" :src="'/img/' + icon + '.svg'" alt="">
             <span v-if="wishlist">OH TESSS</span>
         </div>
     </header>
