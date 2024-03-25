@@ -25,7 +25,7 @@ export default {
 
             <div class="row row-cols-1 row-cols-sm-3">
 
-                <ProductCard v-for="product in products" 
+                <ProductCard v-for="product in state.products" 
                 :identify="product.id" 
                 :frontImage="product.frontImage"
                 :backImage="product.backImage" 
@@ -36,8 +36,7 @@ export default {
                 />
 
             </div>
-            <h1>{{ state.message }}</h1>
-
+            
         </div>
     </main>
 
