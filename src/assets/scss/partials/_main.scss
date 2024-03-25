@@ -41,18 +41,6 @@ div.like {
     cursor: pointer;
 }
 
-img.back{
-    display: none;
-}
-
-.card:hover img.front{
-    display: none;
-}
-
-.card:hover img.back{
-    display: flex;
-}
-
 span.discount {
     bottom: 6rem;
     left: 0;
