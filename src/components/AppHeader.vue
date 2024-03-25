@@ -1,9 +1,11 @@
 <script>
+import ProductCard from './ProductCard.vue';
 export default {
     name: 'AppHeader',
 
     data() {
         return {
+            wishlist: false,
             targets: ['Donna', 'Uomo', 'Bambino'],
             hIcons: ['user', 'heart', 'shopping-bag']
         }
@@ -17,7 +19,7 @@ export default {
     <header id="site_header">
         <!-- /#target -->
         <div class="target">
-            <ul class="target">
+            <ul class="target_list">
                 <li v-for="target in targets">{{ target }}</li>
             </ul>
         </div>
@@ -28,6 +30,7 @@ export default {
         <!-- /#call_to_action -->
         <div id="call_to_action">
             <img v-for="icon in hIcons" :src="'/public/img/' + icon + '.svg'" alt="">
+            <span v-if="wishlist">OH TESSS</span>
         </div>
     </header>
 

@@ -1,6 +1,5 @@
 <script>
-
-import { products } from '../objects.js';
+import { state } from '../state.js';
 import ProductCard from './ProductCard.vue';
 
 export default {
@@ -10,7 +9,7 @@ export default {
     },
     data() {
         return {
-            products: products
+            state, //state : state,//
         }
     }
 };
@@ -23,7 +22,8 @@ export default {
 
             <div class="row row-cols-1 row-cols-sm-3">
 
-                <ProductCard v-for="product in products" :identify="product.id" 
+                <ProductCard v-for="product in products" 
+                :identify="product.id" 
                 :frontImage="product.frontImage"
                 :backImage="product.backImage" 
                 :brand="product.brand" 
@@ -33,6 +33,7 @@ export default {
                 />
 
             </div>
+            <h1>{{ state.message }}</h1>
 
         </div>
     </main>

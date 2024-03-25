@@ -11,10 +11,13 @@
     color: $text_light;
 }
 
-.target ul {
-    display: flex;
-    gap: 1rem;
-    list-style: none;
+.target{
+    .target_list {
+        display: flex;
+        gap: 1rem;
+        list-style: none;
+        margin-top: 1rem;
+    }
 }
 
 #logo img {
@@ -22,7 +25,7 @@
 }
 
 #call_to_action img {
-    width: 2rem;
+    width: 2.75rem;
     padding: 0.5rem;
 }
 

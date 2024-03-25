@@ -1,4 +1,5 @@
 <script>
+import AppHeader from './AppHeader.vue';
 export default {
     name: 'ProductCard',
     props: [
@@ -14,12 +15,14 @@ export default {
     data(){
         return{
             hover: false,
-            hoverHeart: false
+            hoverHeart: false,
+            wishlist: false
         }
     },
     methods:{
         like(){
             this.hoverHeart= true;
+            wishlist = true
         }
     }
 }       
