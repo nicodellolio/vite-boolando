@@ -11,6 +11,9 @@ export default {
         return {
             state, //state : state,//
         }
+    },
+    mounted(){
+        this.state.getProducts('http://localhost:3000/products')
     }
 };
 

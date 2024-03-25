@@ -21,11 +21,11 @@ export default {
             <div class="social">
                 <h6>Trovaci anche su:</h6>
                 <aside class="social">
-                    <img src="/public/img/svg-path.svg" alt="">
-                    <img src="/public/img/square-facebook-2.svg" alt="">
-                    <img src="/public/img/square-instagram-2.svg" alt="">
-                    <img src="/public/img/square-pinterest-2.svg" alt="">
-                    <img src="/public/img/square-youtube-2.svg" alt="">
+                    <img src="/img/svg-path.svg" alt="">
+                    <img src="/img/square-facebook-2.svg" alt="">
+                    <img src="/img/square-instagram-2.svg" alt="">
+                    <img src="/img/square-pinterest-2.svg" alt="">
+                    <img src="/img/square-youtube-2.svg" alt="">
                 </aside>
             </div>
         </div>
