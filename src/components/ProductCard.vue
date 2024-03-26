@@ -1,13 +1,14 @@
 <script>
 
-import MyModal from '../components/MyModal.vue';
+
 
 export default {
     name: 'ProductCard',
     components: {
-        MyModal
+
     },
     props: [
+        'product',
         'identifier',
         'frontImage',
         'backImage',
@@ -34,8 +35,6 @@ export default {
 </script>
 
 <template>
-
-    <MyModal />
 
     <!-- <div v-if="open" class="card_modal d-flex" role="dialog" aria-labelledby="modalTitle" aria-describedby="modalDescription">
         <div class="image_box ">
@@ -73,7 +72,7 @@ export default {
     </div> -->
 
     <div class="col mt-1 mb-4 ">
-        <div @mouseover="hover = true" @mouseleave="hover = false" class="card h-100">
+        <div @mouseover="hover = true" @mouseleave="hover = false" @click="$emit('show-modal', product)" class="card h-100">
 
             <div @click="like()" :class="{ active: hoverHeart }" class="hearts">
                 <div class="like">&hearts;</div>
@@ -90,7 +89,7 @@ export default {
             <img v-else :src="'/img/' + frontImage" class="front model w-100" alt="">
 
             <div class="brand ms-1">{{ brand }}</div>
-            <div @click="open = true" class="description fw-bold text-uppercase ms-1">{{ itemName }}</div>
+            <div @click="open = true" class="description fw-bold text-uppercase ms-1">{{ product.itemName }}</div>
 
             <div class="price ms-1">
                 <span class="newprice fw-bold fs-6 me-2" v-if="badges[badges.length - 1].type == 'discount'">{{ (price /
