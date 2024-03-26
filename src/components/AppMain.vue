@@ -35,7 +35,7 @@ export default {
 
             <div class="row row-cols-1 row-cols-sm-3">
 
-                <ProductCard v-for="product in state.products" 
+                <ProductCard v-for="product in state.products"
                 :identifier="product.id" 
                 :frontImage="product.frontImage"
                 :backImage="product.backImage" 
@@ -43,6 +43,7 @@ export default {
                 :itemName="product.itemName"
                 :price="product.price" 
                 :isInFavorites="product.isInFavorites" :badges="product.badges" 
+                :description="product.description"
                 />
 
             </div>

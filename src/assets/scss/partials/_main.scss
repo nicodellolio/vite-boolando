@@ -43,12 +43,20 @@ div.like {
     padding: 0.5rem 1rem 0.25rem 1rem;
     cursor: pointer;
 }
-div.modalLike{
+div.modalLike, div.cart{
     bottom: 3rem;
     right: 3rem;
-    background-color: transparent;
-    font-size: 3rem;
+    background-color: rgba(255, 0, 0, 0.085);
+    font-size: 2rem;
     border: 5px solid red;
+    border-radius: 30px;
+    padding: 0.5rem 1.5rem;
+}
+div.cart{
+    right: 35%;
+    border: 5px solid rgb(0, 128, 0,);
+    background-color: rgba(0, 128, 0, 0.085);
+
 }
 
 
@@ -58,12 +66,13 @@ div.modalLike{
     position: fixed;
     z-index: 999;
     top: 10%;
-    left: 23%;
-    width: 60%;
+    left: 18%;
+    width: 63%;
     padding: 3rem;
 
     .textMod{
         margin: 2rem 0 0 2rem;
+        width: 70%;
         .nameMod{
             font-size: 4rem;
             color: orange;
@@ -74,12 +83,25 @@ div.modalLike{
         font-style: italic;
         }
         .priceMod{
-            margin-top: 500px; 
-            font-size: 3rem;   
+            position: absolute;
+            right: 3rem;
+            font-size: 2rem; 
+            bottom: 10rem;
         }
-    }
+        .descriptionTextMod{
+            margin-top: 2rem;
+            font-size: 1.25rem;
+            font-family:Verdana, Geneva, Tahoma, sans-serif;
+        }
+        span.newpriceMod{
+            font-size: 3rem ;
+            color: red;
+            margin-right: 1rem;
+        }    
+    }   
+
     .image_box{
-        width: 40%;
+        width: 30%;
         display: flex;
         flex-direction: column;
         img{
@@ -95,8 +117,12 @@ div.modalLike{
 
     .modal_btn{
         position: absolute;
-        top: 1rem;
-        right: 1rem;
+        top: 2rem;
+        right: 2rem;
+        border: none;
+        background-color: transparent;
+        font-size: 2rem;
+        font-weight: bolder;
     }
 }
 
@@ -122,4 +148,6 @@ span.eco.noDiscount {
 
 div.hearts.active {
     color: $danger_text;
+    font-weight: bold;
+    max-width: 334px;
 }
