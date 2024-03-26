@@ -12,16 +12,17 @@ export default {
         'isInFavorites',
         'badges'
     ],
-    data(){
-        return{
+    data() {
+        return {
             hover: false,
             hoverHeart: false,
-            wishlist: false
+            wishlist: false,
+            open: false,
         }
     },
-    methods:{
-        like(){
-            this.hoverHeart= true;
+    methods: {
+        like() {
+            this.hoverHeart = true;
             wishlist = true
         }
     }
@@ -30,14 +31,24 @@ export default {
 
 <template>
 
+    <div v-if="open" class="card_modal">
+        <img class="w-50 mt-3" :src="'/img/' + frontImage" alt="">
+        <img class="w-50 mt-3" :src="'/img/' + backImage"  alt="">
+
+        <h3>{{itemName}}</h3>
+        <h5>{{brand}}</h5>
+        <button class="modal_btn" @click="open = false">X</button>
+    </div>
+
     <div class="col mt-1 mb-4 ">
-        <div  @mouseover="hover = true" @mouseleave="hover = false" class="card h-100">
+        <div @mouseover="hover = true" @mouseleave="hover = false" class="card h-100">
 
             <div @click="like()" :class="{ active: hoverHeart }" class="hearts">
                 <div class="like">&hearts;</div>
             </div>
 
-            <span v-if="badges[badges.length - 1].type == 'discount'" class="discount">{{ badges[badges.length - 1].value }}</span>
+            <span v-if="badges[badges.length - 1].type == 'discount'" class="discount">{{ badges[badges.length -
+        1].value }}</span>
 
             <span v-if="badges[0].type == 'tag'" class="eco"
                 :class="{ 'noDiscount': badges[0].value !== 'Sostenibilità' }">Sostenibilità</span>
@@ -47,11 +58,11 @@ export default {
             <img v-else :src="'/img/' + frontImage" class="front model w-100" alt="">
 
             <div class="brand ms-1">{{ brand }}</div>
-            <div class="description fw-bold text-uppercase ms-1">{{ itemName }}</div>
+            <div @click="open = true" class="description fw-bold text-uppercase ms-1">{{ itemName }}</div>
 
             <div class="price ms-1">
                 <span class="newprice fw-bold fs-6 me-2" v-if="badges[badges.length - 1].type == 'discount'">{{ (price /
-            100 * (100 - Math.abs((parseInt(badges[badges.length - 1].value))))).toFixed(2) + '&euro;' }}</span>
+        100 * (100 - Math.abs((parseInt(badges[badges.length - 1].value))))).toFixed(2) + '&euro;' }}</span>
 
                 <span
                     :class="{ 'noDiscount': badges[badges.length - 1].value != 'Sostenibilità' && badges[badges.length - 1].value != null }"

@@ -8,7 +8,6 @@ export const state = reactive({
     getProducts(url){
         axios.get(url)
         .then(response => {
-            console.log(response);
             this.products = response.data
         })
     

@@ -1,6 +1,6 @@
 @use './common_rules.scss' as *;
 
-main{
+main {
     height: calc((100vh - 78px) - 175px);
     overflow-y: auto;
 }
@@ -14,7 +14,7 @@ span.newprice {
     font-size: 0.75rem;
 }
 
-span.oldprice.noDiscount{
+span.oldprice.noDiscount {
     text-decoration: line-through;
 }
 
@@ -22,6 +22,10 @@ span.oldprice.noDiscount{
 .over_info {
     position: absolute;
     z-index: 10;
+}
+
+.description{
+    cursor: pointer;
 }
 
 
@@ -41,6 +45,13 @@ div.like {
     cursor: pointer;
 }
 
+.card_modal{
+    width: 30vw;
+    height: 30vh;
+    background-color: rgba(128, 128, 128, 0.272);
+    border-radius: 50px;
+}
+
 span.discount {
     bottom: 6rem;
     left: 0;
@@ -57,7 +68,7 @@ span.eco {
     padding: 0.5rem;
 }
 
-span.eco.noDiscount{
+span.eco.noDiscount {
     left: 0;
 }
 
