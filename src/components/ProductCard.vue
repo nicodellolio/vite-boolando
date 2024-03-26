@@ -1,5 +1,4 @@
 <script>
-import AppHeader from './AppHeader.vue';
 export default {
     name: 'ProductCard',
     props: [
@@ -10,7 +9,8 @@ export default {
         'itemName',
         'price',
         'isInFavorites',
-        'badges'
+        'badges',
+        'description'
     ],
     data() {
         return {
@@ -31,13 +31,38 @@ export default {
 
 <template>
 
-    <div v-if="open" class="card_modal">
-        <img class="w-50 mt-3" :src="'/img/' + frontImage" alt="">
-        <img class="w-50 mt-3" :src="'/img/' + backImage"  alt="">
+    <div v-if="open" class="card_modal d-flex" role="dialog" aria-labelledby="modalTitle" aria-describedby="modalDescription">
+        <div class="image_box ">
+            <img class="frontMod mt-2" :src="'/img/' + frontImage" alt="">
+            <img class="backMod mt-2" :src="'/img/' + backImage" alt="">
+        </div>
 
-        <h3>{{itemName}}</h3>
-        <h5>{{brand}}</h5>
-        <button class="modal_btn" @click="open = false">X</button>
+        <div class="textMod">
+
+            <h3 class="nameMod fw-bolder mt-2 text-uppercase" >{{ itemName }}</h3>
+            <h5 class="brandMod">{{ brand }}</h5>
+            
+            <div @click="like()" :class="{ active: hoverHeart }" class="hearts">
+                <div class="like modalLike"> Add to wishlist &hearts;</div>
+            </div>
+
+            <div class="descriptionTextMod">
+                <p>{{ description }}</p>
+            </div>
+            
+            <div class="priceMod ms-1">
+                <span class="newprice fw-bold fs-6 me-2" v-if="badges[badges.length - 1].type == 'discount'">{{ (price /
+                100 * (100 - Math.abs((parseInt(badges[badges.length - 1].value))))).toFixed(2) + '&euro;' }}</span>
+
+                <span
+                :class="{ 'noDiscount': badges[badges.length - 1].value != 'Sostenibilità' && badges[badges.length - 1].value != null }"
+                class="oldprice ms-1">{{ price + '&euro;'}}
+                </span>
+            </div>
+
+        </div>
+
+        <button aria-label="Close modal" class="modal_btn" @click="open = false">X</button>
     </div>
 
     <div class="col mt-1 mb-4 ">
@@ -62,11 +87,12 @@ export default {
 
             <div class="price ms-1">
                 <span class="newprice fw-bold fs-6 me-2" v-if="badges[badges.length - 1].type == 'discount'">{{ (price /
-        100 * (100 - Math.abs((parseInt(badges[badges.length - 1].value))))).toFixed(2) + '&euro;' }}</span>
+                100 * (100 - Math.abs((parseInt(badges[badges.length - 1].value))))).toFixed(2) + '&euro;' }}</span>
 
                 <span
                     :class="{ 'noDiscount': badges[badges.length - 1].value != 'Sostenibilità' && badges[badges.length - 1].value != null }"
-                    class="oldprice ms-1">{{ price + '&euro;'}}</span>
+                    class="oldprice ms-1">{{ price + '&euro;'}}
+                </span>
             </div>
 
         </div>

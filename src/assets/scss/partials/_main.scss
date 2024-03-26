@@ -24,7 +24,7 @@ span.oldprice.noDiscount {
     z-index: 10;
 }
 
-.description{
+.description {
     cursor: pointer;
 }
 
@@ -37,19 +37,67 @@ span.eco {
 }
 
 div.like {
-    top: 0.5rem;
     right: 0;
     font-size: 2rem;
     background-color: #fff;
     padding: 0.5rem 1rem 0.25rem 1rem;
     cursor: pointer;
 }
+div.modalLike{
+    bottom: 3rem;
+    right: 3rem;
+    background-color: transparent;
+    font-size: 3rem;
+    border: 5px solid red;
+}
 
-.card_modal{
-    width: 30vw;
-    height: 30vh;
-    background-color: rgba(128, 128, 128, 0.272);
+
+.card_modal {
+    background-color: rgb(253, 249, 249);
     border-radius: 50px;
+    position: fixed;
+    z-index: 999;
+    top: 10%;
+    left: 23%;
+    width: 60%;
+    padding: 3rem;
+
+    .textMod{
+        margin: 2rem 0 0 2rem;
+        .nameMod{
+            font-size: 4rem;
+            color: orange;
+        }
+        .brandMod{
+        margin-top: 0.5rem;
+        font-size: 2.5rem;
+        font-style: italic;
+        }
+        .priceMod{
+            margin-top: 500px; 
+            font-size: 3rem;   
+        }
+    }
+    .image_box{
+        width: 40%;
+        display: flex;
+        flex-direction: column;
+        img{
+            width: 100%;
+        }
+        .frontMod{
+            border-top-left-radius: 30px;
+        }
+        .backMod{
+            border-bottom-left-radius: 30px;
+        }
+    }
+
+    .modal_btn{
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+    }
 }
 
 span.discount {
