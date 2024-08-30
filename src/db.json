@@ -1,105 +1,23 @@
 
-{ "products": [
-    {
-        "id": 1,
-        "frontImage": "1.webp",
-        "backImage": "1b.webp",
-        "brand": "Levi's",
-        "itemName": "Relaxed Fit Tee Unisex",
-        "price": 29.99,
-        "badges": [
-            {
-                "type": "tag",
-                "value": "Sostenibilità"
-            },
-            {
-                "type": "discount",
-                "value": "-50%"
-            }
-        ],
-        "description": "This unisex Levi's t-shirt is made of soft, durable cotton and features a crisp white color with a bold black Levi's logo on the chest. The shirt offers a comfortable fit and is suitable for both men and women. Perfect for casual or everyday wear."
-    },
-    {
-        "id": 2,
-        "frontImage": "2.webp",
-        "backImage": "2b.webp",
-        "brand": "Guess",
-        "itemName": "Roses Tee",
-        "price": 20.99,
-        "badges": [
-            {
-                "type": "discount",
-                "value": "-30%"
-            }
-        ],
-        "description": "This Guess t-shirt is made of soft, breathable cotton and features a round neckline and short sleeves. The crisp white color makes it versatile and easy to style. The Guess logo on the left chest adds a subtle touch of sophistication. Perfect for casual occasions."
-    },
+{ "days": [
     {
         "id": 3,
-        "frontImage": "3.webp",
-        "backImage": "3b.webp",
-        "brand": "Come Zucchero Filato",
-        "itemName": "Voglia di colori pastello",
-        "price": 129.99,
-         "badges": [
+        "frontImage": "brighton.webp",
+        "city": "melbourne",
+        "date": "02/09/2024",
+        "stops": [
             {
-                "type": "discount",
-                "value": "-30%"
-            }
-        ],
-        "description": "This green work dress is a stylish and professional choice, made of a comfortable and breathable material. The dress features a flattering cut, classic collar, and short sleeves. With a clean, simple design, it exudes professionalism and style. The hem falls above the knee, making it an appropriate length for the workplace."
-    },
-    {
-        "id": 4,
-        "frontImage": "4.webp",
-        "backImage": "4b.webp",
-        "brand": "Levi's",
-        "itemName": "Tee Unisex",
-        "price": 14.99,
-        "badges": [
-            {
-                "type": "tag",
-                "value": "Sostenibilità"
+                "name": "Brighton Beach",
+                "type": "beach",
+                "distance_from_center": 3.5
             },
             {
-                "type": "discount",
-                "value": "-50%"
+                "name": "Half Moon Bay",
+                "type": "beach",
+                "distance_from_center": 4.5
             }
-        ],
-        "description": "This Levi's t-shirt is a classic and stylish choice for both men and women. The shirt is made of soft, durable cotton and features a crisp white color, making it easy to pair with a variety of bottoms and accessories. The red Levi's logo is printed in a bold, modern font on the left chest, adding a pop of color to the simple design. The t-shirt offers a comfortable fit and is perfect for casual or everyday wear."
-    },
-    {
-        "id": 5,
-        "frontImage": "5.webp",
-        "backImage": "5b.webp",
-        "brand": "Maya Deluxe",
-        "itemName": "Stripe Bodice",
-        "price": 99.99,
-        "badges": [
-            {
-                "type": null,
-                "value": null
-            }
-        ],
-        "description": "This sand color dress is a stylish and elegant choice for women. The dress is made of a soft and breathable material, with a flattering cut that flatters a range of body types. The dress features a soft sand color, with a classic collar and short sleeves. The hem falls just above the knee, making it an appropriate length for a variety of occasions. The dress is completed with a clean, simple design that exudes elegance and sophistication. Perfect for any woman looking to make a great impression at a formal event or special occasion."
-    },
-    {
-        "id": 6,
-        "frontImage": "6.webp",
-        "backImage": "6b.webp",
-        "brand": "Esprit",
-        "itemName": "Maglione - Black",
-        "price": 29.99,
-        "badges": [
-            {
-                "type": "tag",
-                "value": "Sostenibilità"
-            },
-            {
-                "type": null,
-                "value": null
-            }
-        ],
-        "description": "This black cashmere jumper is a cozy and stylish choice for women. The jumper is made of soft and luxurious cashmere material, with a comfortable and relaxed fit. The jumper features a classic crew neckline and long sleeves, making it perfect for keeping warm during the colder months. The black color is versatile and easy to pair with a variety of bottoms and accessories. Perfect for any woman looking for a comfortable and chic outfit for casual or everyday wear."
+        ]
+
     }
-]}
+
+]}  

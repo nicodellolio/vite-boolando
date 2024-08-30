@@ -10,7 +10,7 @@ export default {
     <footer id="site_footer">
         <div class="footer_container">
             <div class="info_footer">
-                <h2>Boolando s.r.l.</h2>
+                <h2 style="font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;" class="fw-lighter">TRAVEL APP</h2>
                 <aside class="info_footer">
                     <span>Informazioni legali</span>
                     <span>Informativa sulla privacy</span>

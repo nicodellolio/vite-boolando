@@ -5,10 +5,10 @@ export const state = reactive({
     message: 'Hello Reactive World',
     //methods below
     
-    getProducts(url){
+    getDays(url){
         axios.get(url)
         .then(response => {
-            this.products = response.data
+            this.days = response.data
         })
     
     }

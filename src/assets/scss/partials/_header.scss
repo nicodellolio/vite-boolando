@@ -20,8 +20,11 @@
     }
 }
 
-#logo img {
-    width: 10rem;
+#logo, #logo span{
+    min-width: 10rem;
+   font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 2rem;
+    font-weight: 900;
 }
 
 #call_to_action img {

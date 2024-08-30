@@ -9,15 +9,10 @@ div.brand {
     color: $text_brand
 }
 
-span.newprice {
-    color: $danger_text;
+span.date {
+    color: $text_brand;
     font-size: 0.75rem;
 }
-
-span.oldprice.noDiscount {
-    text-decoration: line-through;
-}
-
 
 .over_info {
     position: absolute;

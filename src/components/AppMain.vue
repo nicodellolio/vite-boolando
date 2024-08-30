@@ -1,28 +1,28 @@
 <script>
 import { state } from '../state.js';
-import ProductCard from './ProductCard.vue';
+import DayCard from './DayCard.vue';
 import MyModal from './MyModal.vue';
 
 export default {
     name: 'AppMain',
     components: {
-        ProductCard,
+        DayCard,
         MyModal
     },
     data() {
         return {
             state, //state : state,//
-            product: null,
+            day: null,
             open: false,
         }
     },
     methods:{
-        openModal(product){
-            this.product = product;
+        openModal(day){
+            this.day = day;
 
 
             this.open = true;
-            console.log(product.itemName);
+            console.log(day.id);
             console.log(this.open);
         },
         closeModal(){
@@ -31,7 +31,7 @@ export default {
         }
     },
     mounted(){
-        this.state.getProducts('http://localhost:3000/products')
+        this.state.getDays('http://localhost:3000/days')
     }
 };
 
@@ -39,20 +39,24 @@ export default {
 
 <template>
     <main id="site_main">
-        <div class="container">
+        <div class="container-fluid">
 
-            <div class="row row-cols-1 row-cols-sm-3">
+            <div style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-weight: 900;" class="cityName display-1 px-5 pb-5">
+                Melbourne
+            </div>
 
-                <ProductCard v-for="product in state.products"
-                :product="product"
-                :identifier="product.id" 
-                :frontImage="product.frontImage"
-                :backImage="product.backImage" 
-                :brand="product.brand" 
-                :itemName="product.itemName"
-                :price="product.price" 
-                :isInFavorites="product.isInFavorites" :badges="product.badges" 
-                :description="product.description"
+            <div class="row row-cols-1 row-cols-sm-4 px-5">
+
+                <DayCard v-for="day in state.days"
+                :day="day"
+                :identifier="day.id" 
+                :frontImage="day.frontImage"
+                :backImage="day.backImage" 
+                :brand="day.brand" 
+                :itemName="day.itemName"
+                :price="day.price" 
+                :isInFavorites="day.isInFavorites" :badges="day.badges" 
+                :description="day.description"
                 @show-modal="openModal"
                 />
 
@@ -61,7 +65,7 @@ export default {
         </div>
 
         <div v-if="open">
-            <MyModal :open="open" :product="product" />
+            <MyModal :open="open" :day="day" />
         </div>
     </main>
 
