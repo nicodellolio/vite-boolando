@@ -20,14 +20,14 @@ export default {
             <ul class="target_list">
                 <li v-for="target in targets">{{ target }}</li>
             </ul>
+            <div id="call_to_action">
+                <img v-for="icon in hIcons" :src="'/img/' + icon + '.svg'" alt="">
+            </div> 
         </div>
+        -->
         <div id="logo">
             My Trip to <span style="color: blue;">Australia</span>
         </div>
-        <div id="call_to_action">
-            <img v-for="icon in hIcons" :src="'/img/' + icon + '.svg'" alt="">
-        </div> 
-    -->
     </header>
 
     <img src="" alt="">

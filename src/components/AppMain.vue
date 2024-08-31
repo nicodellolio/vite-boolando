@@ -12,26 +12,35 @@ export default {
     data() {
         return {
             state, //state : state,//
-            day: null,
-            open: false,
-        }
+            isModalOpen: false,
+            selectedDay: null,
+            days: []
+        };
     },
-    methods:{
-        openModal(day){
-            this.day = day;
+    methods: {
+        // openModal(day){
+        //     this.day = day;
 
-
-            this.open = true;
-            console.log(day.id);
-            console.log(this.open);
+        //     this.open = true;
+        //     console.log(day.id);
+        //     console.log(this.open);
+        // },
+        // closeModal(){
+        //     this.open = false;
+        //     console.log(this.open);
+        // }
+        showModal(day) {
+            this.selectedDay = day;
+            this.isModalOpen = true;
+            console.log(this.isModalOpen);
         },
-        closeModal(){
-            this.open = false;
-            console.log(this.open);
+        closeModal() {
+            this.isModalOpen = false;
+            console.log(this.isModalOpen);
         }
     },
     mounted(){
-        this.state.getDays('http://localhost:3000/days')
+        this.state.getDays('http://localhost:3000/days');
     }
 };
 
@@ -41,7 +50,8 @@ export default {
     <main id="site_main">
         <div class="container-fluid">
 
-            <div style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-weight: 900;" class="cityName display-1 px-5 pb-5">
+            <div style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-weight: 900;"
+                class="cityName display-1 px-5 pb-5">
                 Melbourne
             </div>
 
@@ -49,28 +59,31 @@ export default {
 
                 <DayCard v-for="day in state.days"
                 :day="day"
-                :identifier="day.id" 
+                :key="day.id" 
                 :frontImage="day.frontImage"
-                :backImage="day.backImage" 
-                :brand="day.brand" 
-                :itemName="day.itemName"
-                :price="day.price" 
-                :isInFavorites="day.isInFavorites" :badges="day.badges" 
-                :description="day.description"
-                @show-modal="openModal"
+                :city="day.city"
+                :date="day.date"
+                :stops="day.stops"
+                :accomodation="day.accomodation"
+                :expected_expenses="day.expected_expenses" 
+                :open="isModalOpen"
+                @show-modal="showModal"
                 />
 
+
             </div>
-            
+
         </div>
 
-        <div v-if="open">
+        <MyModal v-if="isModalOpen" :open="isModalOpen" :day="selectedDay" @close="closeModal" />
+
+        <!-- <div v-if="open">
             <MyModal :open="open" :day="day" />
-        </div>
+        </div> -->
     </main>
 
 </template>
 
 <style lang="scss">
-    @import '../assets/scss/partials/_main.scss';
+@import '../assets/scss/partials/_main.scss';
 </style>

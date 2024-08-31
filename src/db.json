@@ -1,23 +1,88 @@
 
 { "days": [
     {
-        "id": 3,
+        "id": 1,
         "frontImage": "brighton.webp",
         "city": "melbourne",
         "date": "02/09/2024",
         "stops": [
             {
+                "name": "Melbourne SkyDeck",
+                "type": "outdoor",
+                "distance_from_center": 0.5,
+                "note": "height"
+            },
+            {
                 "name": "Brighton Beach",
-                "type": "beach",
-                "distance_from_center": 3.5
+                "type": "outdoor",
+                "distance_from_center": 3.5,
+                "note": "coloured houses"
             },
             {
                 "name": "Half Moon Bay",
                 "type": "beach",
-                "distance_from_center": 4.5
+                "distance_from_center": 4.5,
+                "note": "blue water"
             }
-        ]
-
+        ],
+        "accomodation": "Crown Promenade Melbourne",
+        "expected_expenses": 90 
+    },
+    {
+        "id": 2,
+        "frontImage": "zoo.jpeg",
+        "city": "melbourne",
+        "date": "03/09/2024",
+        "stops": [
+            {
+                "name": "Melbourne Zoo",
+                "type": "activity",
+                "distance_from_center": 5.5,
+                "note": "animals"
+            },
+            {
+                "name": "Moonlit Sanctuary",
+                "type": "activity",
+                "distance_from_center": 4.5,
+                "note": "rescued animals"
+            },
+            {
+                "name": "St. Kilda Pier",
+                "type": "outdoor",
+                "distance_from_center": 2,
+                "note": "sunset"
+            }
+        ],
+        "accomodation": "Crown Promenade Melbourne",
+        "expected_expenses": 185 
+    },
+    {
+        "id": 3,
+        "frontImage": "botanic.jpg",
+        "city": "melbourne",
+        "date": "04/09/2024",
+        "stops": [
+            {
+                "name": "St. Kilda Beach",
+                "type": "outdoor",
+                "distance_from_center": 2,
+                "note": "sand"
+            },
+            {
+                "name": "Royal Botanic Garden",
+                "type": "outdoor",
+                "distance_from_center": 2.5,
+                "note": "plants"
+            },  
+            {
+                "name": "Melbourne Kayak",
+                "type": "sport",
+                "distance_from_center": 5,
+                "note": "sunset"
+            }
+        ],
+        "accomodation": "Q Squared Serviced Apartments",
+        "expected_expenses": 325 
     }
 
 ]}  
