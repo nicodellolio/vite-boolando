@@ -1,4 +1,6 @@
 <script>
+import { state } from '../state';
+
 export default {
     name: 'MyModal',
     props: [
@@ -7,16 +9,14 @@ export default {
     ],
     data() {
         return {
-            hoverHeart: false
+            state
         }
     },
     methods: {
-        like() {
-            this.hoverHeart = true;
-        },
         closeModal() {
             this.$emit('close');
-        }
+        },
+
     }
 }       
 </script>
@@ -85,7 +85,7 @@ export default {
         </div>
 
 
-        <button aria-label="Close modal" class="modal_btn" @click="open = false">X</button>
+        <button aria-label="Close modal" class="modal_btn" @click="open = false, state.noBlur()">X</button>
     </div>
 
 </template>

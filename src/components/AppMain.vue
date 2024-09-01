@@ -13,22 +13,13 @@ export default {
         return {
             state, //state : state,//
             isModalOpen: false,
+            close: false,
             selectedDay: null,
             days: []
         };
     },
     methods: {
-        // openModal(day){
-        //     this.day = day;
 
-        //     this.open = true;
-        //     console.log(day.id);
-        //     console.log(this.open);
-        // },
-        // closeModal(){
-        //     this.open = false;
-        //     console.log(this.open);
-        // }
         showModal(day) {
             this.selectedDay = day;
             this.isModalOpen = true;
@@ -70,16 +61,13 @@ export default {
                 @show-modal="showModal"
                 />
 
-
             </div>
 
         </div>
 
         <MyModal v-if="isModalOpen" :open="isModalOpen" :day="selectedDay" @close="closeModal" />
 
-        <!-- <div v-if="open">
-            <MyModal :open="open" :day="day" />
-        </div> -->
+
     </main>
 
 </template>

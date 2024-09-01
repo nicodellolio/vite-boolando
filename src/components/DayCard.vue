@@ -1,4 +1,6 @@
 <script>
+import { state } from '../state';
+
 
 export default {
     name: 'DayCard',
@@ -14,10 +16,11 @@ export default {
         'stops',
         'accomodation',
         'expected_expenses',
-        'open'
+        'open',
     ],
     data() {
         return {
+            state,
             hover: false,
             hoverHeart: false,
         }
@@ -33,12 +36,12 @@ export default {
 <template>
 
     <div class="col mt-1 mb-4 ">
-        <div @mouseover="hover = true" @mouseleave="hover = false" class="card h-100 p-4" :class="{ blur: open }">
+        <div class="card h-100 p-4" :class="[open ? 'blur' : '', state.close ? 'no-blur' : '']" @click="$emit('show-modal', day)">
 
-            <img :src="'/img/' + frontImage" class="front model w-100 rounded-2" alt="">
+            <img :src="'/img/' + frontImage" class="front model w-100 rounded-2" alt="" >
 
             <div class="brand ms-1">{{  }}</div>
-            <div @click="$emit('show-modal', day)" class="description fw-bold text-uppercase ms-1 fs-1">Day {{ day.id }}
+            <div  class="description fw-bold text-uppercase ms-1 fs-1">Day {{ day.id }}
             </div>
 
             <div class="ms-1">
@@ -58,6 +61,10 @@ export default {
 
 <style scoped lang='scss'>
 @import '../assets/scss/partials/common_rules';
+
+.card{
+    cursor: pointer;
+}
 
 
 </style>

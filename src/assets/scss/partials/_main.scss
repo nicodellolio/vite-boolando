@@ -3,6 +3,7 @@
 main {
     height: calc((100vh - 78px) - 175px);
     overflow-y: auto;
+    background-color: #fdfdfd;
 }
 
 div.brand {
@@ -19,11 +20,6 @@ span.date {
     z-index: 10;
 }
 
-.description {
-    cursor: pointer;
-}
-
-
 div.like,
 span.discount,
 span.eco {
@@ -31,13 +27,6 @@ span.eco {
     z-index: 10;
 }
 
-div.like {
-    right: 0;
-    font-size: 2rem;
-    background-color: #fff;
-    padding: 0.5rem 1rem 0.25rem 1rem;
-    cursor: pointer;
-}
 div.modalLike, div.cart{
     bottom: 3rem;
     right: 3rem;
@@ -47,16 +36,9 @@ div.modalLike, div.cart{
     border-radius: 30px;
     padding: 0.5rem 1.5rem;
 }
-div.cart{
-    right: 35%;
-    border: 5px solid rgb(0, 128, 0,);
-    background-color: rgba(0, 128, 0, 0.085);
-
-}
-
 
 .card_modal {
-    background-color: rgb(253, 249, 249);
+    background-color: #f0f8ff;
     border-radius: 50px;
     position: fixed;
     z-index: 999;
@@ -64,6 +46,7 @@ div.cart{
     left: 18%;
     width: 63%;
     padding: 3rem;
+    
 
     .textMod{
         margin: 2rem 0 0 2rem;
@@ -119,30 +102,4 @@ div.cart{
         font-size: 2rem;
         font-weight: bolder;
     }
-}
-
-span.discount {
-    bottom: 6rem;
-    left: 0;
-    color: white;
-    background-color: $danger_ban;
-    padding: 0.5rem;
-}
-
-span.eco {
-    left: 4rem;
-    bottom: 6rem;
-    color: #fff;
-    background-color: $success_ban;
-    padding: 0.5rem;
-}
-
-span.eco.noDiscount {
-    left: 0;
-}
-
-div.hearts.active {
-    color: $danger_text;
-    font-weight: bold;
-    max-width: 334px;
 }

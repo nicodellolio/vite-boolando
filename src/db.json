@@ -92,6 +92,37 @@
         ],
         "accomodation": "Q Squared Serviced Apartments",
         "expected_expenses": 325 
+    },
+    {
+        "id": 4,
+        "frontImage": "12-apostoles.jpg",
+        "city": "melbourne",
+        "date": "05/09/2024",
+        "stops": [
+            {
+                "name": "Great Ocean Road",
+                "type": "outdoor",
+                "singleImage": "stkilda_beach.jpg",
+                "distance_from_center": 15,
+                "note": "trip on the oceanside"
+            },
+            {
+                "name": "Lock Ard Gorge",
+                "type": "outdoor",
+                "singleImage": "gorge.jpg",
+                "distance_from_center": 15,
+                "note": "plants"
+            },  
+            {
+                "name": "Twelve-Apostoles",
+                "type": "outdoor",
+                "singleImage": "kayak.jpg",
+                "distance_from_center": 15,
+                "note": "sunset"
+            }
+        ],
+        "accomodation": "Daisy Hill Country Cottage",
+        "expected_expenses": 285 
     }
 
 ]}  
