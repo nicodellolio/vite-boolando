@@ -8,12 +8,14 @@
         "stops": [
             {
                 "name": "Melbourne SkyDeck",
+                "singleImage": "skydeck.avif",
                 "type": "outdoor",
                 "distance_from_center": 0.5,
                 "note": "height"
             },
             {
                 "name": "Brighton Beach",
+                "singleImage": "brighton.webp",
                 "type": "outdoor",
                 "distance_from_center": 3.5,
                 "note": "coloured houses"
@@ -21,6 +23,7 @@
             {
                 "name": "Half Moon Bay",
                 "type": "beach",
+                "singleImage": "halfmoonbay.jpg",
                 "distance_from_center": 4.5,
                 "note": "blue water"
             }
@@ -37,18 +40,21 @@
             {
                 "name": "Melbourne Zoo",
                 "type": "activity",
+                "singleImage": "zoo.jpeg",
                 "distance_from_center": 5.5,
                 "note": "animals"
             },
             {
                 "name": "Moonlit Sanctuary",
                 "type": "activity",
+                "singleImage": "moonlit.avif",
                 "distance_from_center": 4.5,
                 "note": "rescued animals"
             },
             {
                 "name": "St. Kilda Pier",
                 "type": "outdoor",
+                "singleImage": "stkilda.webp",
                 "distance_from_center": 2,
                 "note": "sunset"
             }
@@ -65,18 +71,21 @@
             {
                 "name": "St. Kilda Beach",
                 "type": "outdoor",
+                "singleImage": "stkilda_beach.jpg",
                 "distance_from_center": 2,
                 "note": "sand"
             },
             {
                 "name": "Royal Botanic Garden",
                 "type": "outdoor",
+                "singleImage": "botanic.jpg",
                 "distance_from_center": 2.5,
                 "note": "plants"
             },  
             {
                 "name": "Melbourne Kayak",
                 "type": "sport",
+                "singleImage": "kayak.jpg",
                 "distance_from_center": 5,
                 "note": "sunset"
             }
